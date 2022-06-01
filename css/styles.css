@@ -38,10 +38,15 @@ body {
 
 #login-form input {
     border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
     padding: 15px 0px;
     font-size: 18px;
     margin-bottom: 25px;
+}
+
+/* [] 사이에 쓰인 것들은 특성 선택자 (attribute selector)임. 
+input typedl submit 아닐 때에만 border-bottom, transition이 적용되는 것이다. */
+#login-form input:not([type="submit"]) {
+    border-bottom:  1px solid rgba(0, 0, 0, 0.2);
     transition: border-color .3s ease-in-out;
 }
 
@@ -57,3 +62,22 @@ body {
 #login-form input:focus {
     border-color: var(--yellow);
 }
+
+
+/* #6.8 login form 2 */
+ 
+/* submit 버튼만 스타일링 */
+#login-form input[type="submit"] {
+    background-color: var(--yellow);
+    cursor: pointer;
+    padding: 15px 0px;
+    border-radius: 5px;
+}
+
+#login-form a {
+    text-align: center;
+    text-decoration: none;
+    color: inherit; 
+    /* 부모로부터 색을 상속받음 */
+    font-size: 13 px;
+} 
