@@ -46,3 +46,8 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+/* 모든 인풋 css 속성에 적용될 개인 코드 추가 (6.7강 */
+input:focus {
+	outline: none;
+}
