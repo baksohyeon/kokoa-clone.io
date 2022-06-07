@@ -1,0 +1,114 @@
+.welcome-header {
+    margin: 90px 0px;
+    text-align: center;
+    /* display: flex를 쓸 수도 잇지만 h1과 p 같은 텍스트를 다루는 것이라서 text-align: center 쓴다 */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    /* 헤더 안에 다 센터로 만들어줌 */
+}
+
+/* welcome과 그 아래 텍스트 공간 지정 */
+.welcome-header__title {
+    margin-bottom: 20px ;
+    font-size: 25px;
+    font-weight: 350;
+}
+
+.welcome-header__text {
+    width: 40%;
+    opacity: 0.7;
+}
+
+#login-form {
+   display: flex;
+   flex-direction: column;
+   margin: 0px 30px;
+}
+
+#login-form input {
+   border: none;
+   padding: 15px 0px;
+   font-size: 18px;
+   margin-bottom: 25px;
+}
+
+/* [] 사이에 쓰인 것들은 특성 선택자 (attribute selector)임. 
+input typedl submit 아닐 때에만 border-bottom, transition이 적용되는 것이다. */
+#login-form input:not([type="submit"]) {
+   border-bottom:  1px solid rgba(0, 0, 0, 0.2);
+   transition: border-color .3s ease-in-out;
+}
+
+
+/* placeholder 부분 글씨 설정 */
+#login-form input::placeholder {
+   color: rgba(0, 0, 0, 0.4);
+}
+
+/* #login-form input: focus { } 말고 모든 인풋에 적용되게 css 적용하고 싶음 reset.css 파일 열어서 마지막 부분에다가 코드 적어준다.*/
+
+/* 마우스로 클릭했을 때 border-bottom 색상 바뀌도록 설정하기 */
+#login-form input:focus {
+   border-color: var(--yellow);
+}
+
+
+/* #6.8 login form 2 */
+
+/* submit 버튼만 스타일링 */
+#login-form input[type="submit"] {
+   background-color: var(--yellow);
+   cursor: pointer;
+   padding: 15px 0px;
+   border-radius: 5px;
+}
+
+#login-form a {
+   text-align: center;
+   text-decoration: none;
+   color: inherit; 
+   /* 부모로부터 색을 상속받음 */
+   font-size: 13 px;
+} 
+
+
+/* class 를 사용해서 login-form 지시 내리는 명령어
+.login-form {
+   display: flex;
+   flex-direction: column;
+   margin: 0px 30px;
+   }
+   
+   .login-form__input {
+   border: none;
+   padding: 15px 0px;
+   font-size: 18px;
+   margin-bottom: 25px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+   transition: border-color 0.3s ease-in-out;
+   }
+   
+   .login-form__input::placeholder {
+   color: rgba(0, 0, 0, 0.4);
+   }
+   .login-form__input:focus {
+   border-color: var(--yellow);
+   }
+   
+   .login-form__btn {
+   background-color: var(--yellow);
+   cursor: pointer;
+   padding: 20px;
+   border-radius: 10px;
+   border: none;
+   font-size: 16px;
+   margin-bottom: 25px;
+   align-items: center;
+   }
+   .login-form__a {
+   text-align: center;
+   text-decoration: none;
+   color: inherit;
+   font-size: 13px;
+   } */
